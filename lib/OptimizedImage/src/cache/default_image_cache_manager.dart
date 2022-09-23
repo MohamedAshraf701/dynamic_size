@@ -1,4 +1,4 @@
-import 'package:dynamic_size/OptimizedImage/src/cache/image_cache_manager.dart';
+import 'package:dynamic_z/OptimizedImage/src/cache/image_cache_manager.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 
 /// The DefaultCacheManager that can be easily used directly. The code of

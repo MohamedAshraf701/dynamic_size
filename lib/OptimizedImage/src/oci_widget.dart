@@ -1,6 +1,6 @@
 // ignore_for_file: no_leading_underscores_for_local_identifiers
 
-import 'package:dynamic_size/OptimizedImage/src/image_provider/optimized_cached_image_provider.dart';
+import 'package:dynamic_z/OptimizedImage/src/image_provider/optimized_cached_image_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';

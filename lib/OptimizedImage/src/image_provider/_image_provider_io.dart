@@ -3,9 +3,9 @@
 import 'dart:async' show Future, StreamController, scheduleMicrotask;
 import 'dart:ui' as ui show Codec;
 
-import 'package:dynamic_size/OptimizedImage/src/cache/default_image_cache_manager.dart';
-import 'package:dynamic_size/OptimizedImage/src/cache/image_cache_manager.dart';
-import 'package:dynamic_size/OptimizedImage/src/image_provider/optimized_cached_image_provider.dart';
+import 'package:dynamic_z/Dynamic.dart';
+import 'package:dynamic_z/OptimizedImage/src/cache/default_image_cache_manager.dart';
+import 'package:dynamic_z/OptimizedImage/src/cache/image_cache_manager.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';

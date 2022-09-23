@@ -18,7 +18,7 @@ dynamic_size: <latest_version>
 Import package
 
 ```dart
-import 'package:dynamic_size/Dynamic.dart';
+import 'package:dynamic_size/dynamic_z.dart';
 ```
 
 Add Design Screen Size In Class Constructor
@@ -166,7 +166,7 @@ SizedBox(
 
 ```dart
 final String assetName = 'assets/image.svg';
-final Widget svg = SvgPicture.asset(
+final Widget svg = Sp.asset(
   assetName,
   semanticsLabel: 'Acme Logo'
 );
@@ -176,7 +176,7 @@ You can color/tint the image like so:
 
 ```dart
 final String assetName = 'assets/up_arrow.svg';
-final Widget svgIcon = SvgPicture.asset(
+final Widget svgIcon = Sp.asset(
   assetName,
   color: Colors.red,
   semanticsLabel: 'A red up arrow'
@@ -188,11 +188,11 @@ final Widget svgIcon = SvgPicture.asset(
 ```dart
 // Will print error messages to the console.
 final String assetName = 'assets/image_that_does_not_exist.svg';
-final Widget svg = SvgPicture.asset(
+final Widget svg = Sp.asset(
   assetName,
 );
 
-final Widget networkSvg = SvgPicture.network(
+final Widget networkSvg = Sp.network(
   'https://site-that-takes-a-while.com/image.svg',
   semanticsLabel: 'A shark?!',
   placeholderBuilder: (BuildContext context) => Container(
@@ -331,7 +331,7 @@ This one has limited features and no control over UI
 ## Toast with No Build Context (Android & iOS)
 
 ```dart
-Fluttertoast.showToast(
+toast.show(
         msg: "This is Center Short Toast",
         toastLength: Toast.LENGTH_SHORT,
         gravity: ToastGravity.CENTER,

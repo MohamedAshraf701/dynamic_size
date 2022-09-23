@@ -24,15 +24,15 @@ final Svg svg = Svg._();
 
 /// A utility class for decoding SVG data to a [DrawableRoot] or a [PictureInfo].
 ///
-/// These methods are used by [SvgPicture], but can also be directly used e.g.
+/// These methods are used by [Sp], but can also be directly used e.g.
 /// to create a [DrawableRoot] you manipulate or render to your own [Canvas].
 /// Access to this class is provided by the exported [svg] member.
 class Svg {
   Svg._();
 
-  /// A global override flag for [SvgPicture.cacheColorFilter].
+  /// A global override flag for [Sp.cacheColorFilter].
   ///
-  /// If this is null, the value in [SvgPicture.cacheColorFilter] is used. If it
+  /// If this is null, the value in [Sp.cacheColorFilter] is used. If it
   /// is not null, it will override that value.
   bool? cacheColorFilterOverride;
 
@@ -147,7 +147,7 @@ class Svg {
 /// Returns a [Future] that will complete when the first image yielded by the
 /// [PictureProvider] is available or failed to load.
 ///
-/// If the image is later used by an [SvgPicture], it will probably be loaded
+/// If the image is later used by an [Sp], it will probably be loaded
 /// faster. The consumer of the image does not need to use the same
 /// [PictureProvider] instance. The [PictureCache] will find the picture
 /// as long as both pictures share the same key.
@@ -207,7 +207,7 @@ Future<void> precachePicture(
 /// The picture will be cached using the [PictureCache], incorporating any color
 /// filtering used into the key (meaning the same SVG with two different `color`
 /// arguments applied would be two cache entries).
-class SvgPicture extends StatefulWidget {
+class Sp extends StatefulWidget {
   /// Instantiates a widget that renders an SVG picture using the `pictureProvider`.
   ///
   /// Either the [width] and [height] arguments should be specified, or the
@@ -230,7 +230,7 @@ class SvgPicture extends StatefulWidget {
   /// screen reading software.
   ///
   /// If [excludeFromSemantics] is true, then [semanticLabel] will be ignored.
-  const SvgPicture(
+  const Sp(
     this.pictureProvider, {
     Key? key,
     this.width,
@@ -286,7 +286,7 @@ class SvgPicture extends StatefulWidget {
   /// Then to display the image, use:
   ///
   /// ```dart
-  /// SvgPicture.asset('icons/heart.svg', package: 'my_icons')
+  /// Sp.asset('icons/heart.svg', package: 'my_icons')
   /// ```
   ///
   /// Assets used by the package itself should also be displayed using the
@@ -328,7 +328,7 @@ class SvgPicture extends StatefulWidget {
   ///    Flutter.
   ///
   /// If [excludeFromSemantics] is true, then [semanticLabel] will be ignored.
-  SvgPicture.asset(
+  Sp.asset(
     String assetName, {
     Key? key,
     this.matchTextDirection = false,
@@ -393,7 +393,7 @@ class SvgPicture extends StatefulWidget {
   /// with the image request.
   ///
   /// If [excludeFromSemantics] is true, then [semanticLabel] will be ignored.
-  SvgPicture.network(
+  Sp.network(
     String url, {
     Key? key,
     Map<String, String>? headers,
@@ -454,7 +454,7 @@ class SvgPicture extends StatefulWidget {
   /// `android.permission.READ_EXTERNAL_STORAGE` permission.
   ///
   /// If [excludeFromSemantics] is true, then [semanticLabel] will be ignored.
-  SvgPicture.file(
+  Sp.file(
     File file, {
     Key? key,
     this.width,
@@ -510,7 +510,7 @@ class SvgPicture extends StatefulWidget {
   /// used when parsing SVG elements.
   ///
   /// If [excludeFromSemantics] is true, then [semanticLabel] will be ignored.
-  SvgPicture.memory(
+  Sp.memory(
     Uint8List bytes, {
     Key? key,
     this.width,
@@ -566,7 +566,7 @@ class SvgPicture extends StatefulWidget {
   /// used when parsing SVG elements.
   ///
   /// If [excludeFromSemantics] is true, then [semanticLabel] will be ignored.
-  SvgPicture.string(
+  Sp.string(
     String string, {
     Key? key,
     this.width,
@@ -738,10 +738,10 @@ class SvgPicture extends StatefulWidget {
   final SvgTheme? theme;
 
   @override
-  State<SvgPicture> createState() => _SvgPictureState();
+  State<Sp> createState() => _SvgPictureState();
 }
 
-class _SvgPictureState extends State<SvgPicture> {
+class _SvgPictureState extends State<Sp> {
   PictureInfo? _picture;
   PictureHandle? _handle;
   PictureStream? _pictureStream;
@@ -756,7 +756,7 @@ class _SvgPictureState extends State<SvgPicture> {
   }
 
   @override
-  void didUpdateWidget(SvgPicture oldWidget) {
+  void didUpdateWidget(Sp oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (widget.pictureProvider != oldWidget.pictureProvider) {
       _updatePictureProvider();
@@ -927,7 +927,7 @@ class _SvgPictureState extends State<SvgPicture> {
       return SizedBox(width: width, height: height);
     }
 
-    return SvgPicture.defaultPlaceholderBuilder(context);
+    return Sp.defaultPlaceholderBuilder(context);
   }
 
   @override
