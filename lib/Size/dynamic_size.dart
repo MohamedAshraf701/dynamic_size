@@ -29,4 +29,36 @@ class dynamicsize {
       width: w(value),
     );
   }
+
+  Widget Dcontainer({
+    AlignmentGeometry? alignment,
+    EdgeInsetsGeometry? padding,
+    Color? color,
+    Decoration? decoration,
+    Decoration? foregroundDecoration,
+    double? width,
+    double? height,
+    BoxConstraints? constraints,
+    EdgeInsetsGeometry? margin,
+    Matrix4? transform,
+    AlignmentGeometry? transformAlignment,
+    Widget? child,
+    Clip clipBehavior = Clip.none,
+  }) {
+    return Container(
+      decoration: decoration,
+      color: color,
+      alignment: alignment,
+      margin: margin,
+      padding: padding,
+      clipBehavior: clipBehavior,
+      constraints: constraints,
+      foregroundDecoration: foregroundDecoration,
+      transform: transform,
+      transformAlignment: transformAlignment,
+      height: height != null ? h(height) : height,
+      width: width != null ? w(width) : width,
+      child: child,
+    );
+  }
 }
