@@ -28,15 +28,15 @@ import 'package:dynamic_size/dynamic_size.dart';
 Add Design Screen Size In Class Constructor
 
 ```dart
- dynamicsize size = dynamicsize(context, 849, 393);
+ dynamicsize size = dynamicsize( 849, 393);
 ```
 Add height & Width
 ```dart
-  dynamicsize size = dynamicsize(context, 849, 393);
-  height = size.h(20);
-  width = size.w(20);
-  HeightSpace(20);
-  WidthSpace(20);
+  dynamicsize size = dynamicsize( 849, 393);
+  height = size.height(20);
+  width = size.width(20);
+  size.HeightSpace(20);
+  size.WidthSpace(20);
 ```
 
 A New Dynamic Container
