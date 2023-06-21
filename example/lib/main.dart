@@ -6,6 +6,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     dynamicsize size = dynamicsize(849, 393);
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Dynamic Size Example'),
+          title: const Text('Dynamic Size Example'),
         ),
         body: Center(
           child: Column(

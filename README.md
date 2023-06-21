@@ -50,7 +50,7 @@ size.WidthSpace(20);
 Create a new dynamic container:
 
 ```dart
-Dcontainer(
+dContainer(
   height: 20,
   width: 20,
 );
@@ -59,9 +59,9 @@ Dcontainer(
 For navigation:
 
 ```dart
-Pop(context);
-NewScreen(context, Screen());
-ReplaceScreen(context, Screen());
+pop(context);
+newScreen(context, screen());
+replaceScreen(context, screen());
 ```
 
 For more advanced usage and customization options, refer to the package's [API documentation](https://pub.dev/documentation/dynamic_size/latest/dynamic_size/dynamicsize-class.html).
