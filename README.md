@@ -1,61 +1,86 @@
-## Platform Support
 
-| Android | iOS | | :-----: | :-: | | ✔️ | ✔️
+# Dynamic Size
+
+[![Pub Version](https://img.shields.io/pub/v/dynamic_size.svg)](https://pub.dev/packages/dynamic_size)
+![Flutter Platform](https://img.shields.io/badge/platform-flutter-yellow)
+
+A Flutter package that provides dynamic sizing capabilities, allowing you to adapt your UI elements to different screen sizes.
+
+## Features
+
+- Dynamically adjust the height and width of UI elements based on the screen size.
+- Easily create responsive UIs that work well on different devices and orientations.
+- Convenient methods for adding spacing between elements.
 
 ## Installation
 
-Add this line to pubspec.yaml
+Add the following line to your `pubspec.yaml` file:
 
-yaml
-```dart
-
+```yaml
 dependencies:
-    dynamic_size: <latest_version>
-
+  dynamic_size: <latest_version>
 ```
 
-
+Then run `flutter pub get` to fetch the package.
 
 ## Usage
 
-
-Import package
+Import the package into your Dart file:
 
 ```dart
 import 'package:dynamic_size/dynamic_size.dart';
 ```
 
-Add Design Screen Size In Class Constructor
+Initialize the `dynamicsize` class with the design screen size:
 
 ```dart
- dynamicsize size = dynamicsize( 849, 393);
-```
-Add height & Width
-```dart
-  dynamicsize size = dynamicsize( 849, 393);
-  height = size.height(20);
-  width = size.width(20);
-  size.HeightSpace(20);
-  size.WidthSpace(20);
+dynamicsize size = dynamicsize(849, 393);
 ```
 
-A New Dynamic Container
-```dart
-
-  Dcontainer(
-      height:20
-      width:20
-      );
-  
-```
-
-For Navigation :-
+Adjust the height and width of your UI elements:
 
 ```dart
-
-  Pop(context);
-  NewScreen(context,Screen());
-  ReplaceScreen(context,Screen());
-  
+dynamicsize size = dynamicsize(849, 393);
+height = size.height(20);
+width = size.width(20);
+size.HeightSpace(20);
+size.WidthSpace(20);
 ```
 
+Create a new dynamic container:
+
+```dart
+Dcontainer(
+  height: 20,
+  width: 20,
+);
+```
+
+For navigation:
+
+```dart
+Pop(context);
+NewScreen(context, Screen());
+ReplaceScreen(context, Screen());
+```
+
+For more advanced usage and customization options, refer to the package's [API documentation](https://pub.dev/documentation/dynamic_size/latest/dynamic_size/dynamicsize-class.html).
+
+## Examples
+
+You can find more usage examples in the [example](example) folder of this repository.
+
+## License
+
+This project is licensed under the [MIT License](https://zaid.digital).
+
+## Contributing
+
+Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
+
+## Get in touch
+
+If you have any questions, feel free to reach out:
+
+- Email: ashrafchauhan567@gmail.com
+- GitHub: [@MohamedAshraf701](https://github.com/MohamedAshraf701)
