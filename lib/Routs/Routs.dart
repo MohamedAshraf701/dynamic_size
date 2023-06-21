@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Routs {
-  Pop(BuildContext context) {
-    Navigator.canPop(context) ? Navigator.pop(context) : null;
+  pop(BuildContext context) {
+   if( Navigator.canPop(context)) Navigator.pop(context);
   }
 
   NewScreen(BuildContext context, Function() Screen) {
