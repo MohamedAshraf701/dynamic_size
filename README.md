@@ -1,7 +1,7 @@
 
-# Dynamic Size
+# Dynamic Utils
 
-[![Pub Version](https://img.shields.io/pub/v/dynamic_size.svg)](https://pub.dev/packages/dynamic_size)
+[![Pub Version](https://img.shields.io/pub/v/dynamicutils.svg)](https://pub.dev/packages/dynamicutils)
 ![Flutter Platform](https://img.shields.io/badge/platform-flutter-yellow)
 
 A Flutter package that provides dynamic sizing capabilities, allowing you to adapt your UI elements to different screen sizes.
@@ -18,7 +18,7 @@ Add the following line to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  dynamic_size: <latest_version>
+  dynamicutils: <latest_version>
 ```
 
 Then run `flutter pub get` to fetch the package.
@@ -28,19 +28,19 @@ Then run `flutter pub get` to fetch the package.
 Import the package into your Dart file:
 
 ```dart
-import 'package:dynamic_size/dynamic_size.dart';
+import 'package:dynamicutils/dynamicutils.dart';
 ```
 
-Initialize the `dynamicsize` class with the design screen size:
+Initialize the `DynamicSize` class with the design screen size:
 
 ```dart
-dynamicsize size = dynamicsize(849, 393);
+DynamicSize size = DynamicSize(849, 393);
 ```
 
 Adjust the height and width of your UI elements:
 
 ```dart
-dynamicsize size = dynamicsize(849, 393);
+DynamicSize size = DynamicSize(849, 393);
 height = size.height(20);
 width = size.width(20);
 size.HeightSpace(20);
@@ -64,7 +64,7 @@ newScreen(context, screen());
 replaceScreen(context, screen());
 ```
 
-For more advanced usage and customization options, refer to the package's [API documentation](https://pub.dev/documentation/dynamic_size/latest/dynamic_size/dynamicsize-class.html).
+For more advanced usage and customization options, refer to the package's [API documentation](https://pub.dev/documentation/dynamicutils/latest/dynamicutils/DynamicSize-class.html).
 
 ## Examples
 

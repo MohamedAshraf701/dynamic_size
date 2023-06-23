@@ -1,6 +1,6 @@
-name: dynamic_size
+name: dynamicutils
 description: Flutter Package For Create A Responsive Design From Figma,XD Etc.....
-version: 0.1.9
+version: 1.0.1
 homepage: https://github.com/MohamedAshraf701/dynamic_size
 
 environment:

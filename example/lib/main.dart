@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:dynamic_size/dynamic_size.dart';
+import 'package:dynamicutils/dynamicutils.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    dynamicsize size = dynamicsize(849, 393);
+    DynamicSize size = DynamicSize(849, 393);
 
     return MaterialApp(
       title: 'Dynamic Size Example',

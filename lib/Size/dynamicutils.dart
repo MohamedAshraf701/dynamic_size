@@ -1,11 +1,11 @@
 /// A library for dynamic sizing and navigation in Flutter.
 ///
-/// The `dynamic_size` library provides utilities for dynamically sizing widgets based on the device's screen dimensions.
+/// The `dynamicutils` library provides utilities for dynamically sizing widgets based on the device's screen dimensions.
 /// It also includes navigation functions for managing screen transitions.
 ///
 /// Usage:
-/// 1. Import the `dynamic_size` library.
-/// 2. Create an instance of the `dynamicsize` class by providing the initial height and width values.
+/// 1. Import the `dynamicutils` library.
+/// 2. Create an instance of the `DynamicSize` class by providing the initial height and width values.
 /// 3. Use the `height` and `width` methods to dynamically calculate the desired height and width based on the provided values.
 /// 4. Use the `HeightSpace` and `WidthSpace` methods to create `SizedBox` widgets with dynamic heights and widths.
 /// 5. Use the `dContainer` method to create a `Container` widget with dynamic dimensions and other customizable properties.
@@ -14,27 +14,27 @@
 /// Note: This library requires the `flutter` and `material` packages.
 // ignore_for_file: deprecated_member_use
 
-library dynamic_size;
+library dynamicutils;
 
 import 'package:flutter/material.dart';
 
 /// A class for dynamically sizing widgets based on screen dimensions.
 ///
-/// The `dynamicsize` class provides methods for calculating the desired height and width
+/// The `DynamicSize` class provides methods for calculating the desired height and width
 /// based on the provided initial height and width values. It also includes methods for creating
 /// `SizedBox` widgets with dynamic heights and widths, as well as a method for creating a `Container`
 /// widget with dynamic dimensions and other customizable properties.
-class dynamicsize {
+class DynamicSize {
   final double _height;
   final double _width;
 
-  /// Constructs a new `dynamicsize` object with the provided initial height and width values.
+  /// Constructs a new `DynamicSize` object with the provided initial height and width values.
   ///
-  /// The `dynamicsize` object allows for dynamic sizing calculations based on the screen dimensions.
+  /// The `DynamicSize` object allows for dynamic sizing calculations based on the screen dimensions.
   ///
   /// - `height`: The initial height value used for dynamic sizing calculations.
   /// - `width`: The initial width value used for dynamic sizing calculations.
-  dynamicsize(this._height, this._width);
+  DynamicSize(this._height, this._width);
 
   /// Calculates the dynamic height based on the provided value and the screen dimensions.
   ///
@@ -60,11 +60,11 @@ class dynamicsize {
 
   /// Creates a `SizedBox` widget with a dynamic height based on the provided value.
   ///
-  /// The `HeightSpace` method creates a `SizedBox` widget with a dynamic height based on the provided value.
+  /// The `heightSpace` method creates a `SizedBox` widget with a dynamic height based on the provided value.
   ///
   /// - `value`: The value representing a percentage of the initial height value.
   /// - Returns: A `SizedBox` widget with the calculated dynamic height.
-  Widget HeightSpace(double value) {
+  Widget heightSpace(double value) {
     return SizedBox(
       height: height(value),
     );
@@ -72,11 +72,11 @@ class dynamicsize {
 
   /// Creates a `SizedBox` widget with a dynamic width based on the provided value.
   ///
-  /// The `WidthSpace` method creates a `SizedBox` widget with a dynamic width based on the provided value.
+  /// The `widthSpace` method creates a `SizedBox` widget with a dynamic width based on the provided value.
   ///
   /// - `value`: The value representing a percentage of the initial width value.
   /// - Returns: A `SizedBox` widget with the calculated dynamic width.
-  Widget WidthSpace(double value) {
+  Widget widthSpace(double value) {
     return SizedBox(
       width: width(value),
     );
@@ -143,7 +143,7 @@ class dynamicsize {
 ///
 /// - `context`: The context of the current screen.
 void pop(BuildContext context) {
-  Navigator.canPop(context) ? Navigator.pop(context) : null;
+  if (Navigator.canPop(context)) Navigator.pop(context);
 }
 
 /// Navigates to a new screen.
